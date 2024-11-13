@@ -29,7 +29,7 @@ for i in diretorios:
         print("diretorios já nâo esta vazio")
         continue
     for j in test:
-        if os.path.exists("dataset/val/{i}/j") == False:
+        if os.path.exists(f"dataset/val/{i}/{j}") == False:
             shutil.move(f"dataset/train/{i}/{j}",mover_para)
         else:
             print("imagem já esta no conjunto de val")
